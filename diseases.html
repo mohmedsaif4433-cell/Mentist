@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسوعة الأمراض - Mentist</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .diseases-page { padding: 60px 0; background-color: #FFFFFF; }
+        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header h1 { font-size: 42px; font-weight: 700; color: #0A2540; margin-bottom: 15px; }
+        .page-header p { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto; }
+        .diseases-container { display: flex; gap: 30px; align-items: flex-start; }
+        .diseases-nav { flex: 0 0 280px; background: #F8F9FA; border-radius: 10px; padding: 20px; position: sticky; top: 120px; }
+        .diseases-nav h3 { font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid #007BFF; padding-bottom: 10px; }
+        .diseases-nav ul { list-style: none; }
+        .diseases-nav li a { display: block; padding: 12px 15px; text-decoration: none; color: #0A2540; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; }
+        .diseases-nav li a:hover, .diseases-nav li a.active { background-color: #EBF5FF; color: #007BFF; transform: translateX(-5px); }
+        .disease-content { flex: 1; }
+        .disease-section { display: none; animation: fadeIn 0.5s; }
+        .disease-section.active { display: block; }
+        .disease-card { background: #F8F9FA; border-radius: 15px; padding: 30px; border-right: 5px solid #007BFF; }
+        .disease-card h2 { font-size: 28px; margin-bottom: 20px; }
+        .disease-card h4 { font-size: 18px; font-weight: 700; color: #007BFF; margin-top: 25px; margin-bottom: 10px; }
+        .disease-card p, .disease-card ul { color: #333; line-height: 1.8; }
+        .disease-card ul { padding-right: 20px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @media (max-width: 992px) { .diseases-container { flex-direction: column; } .diseases-nav { position: static; width: 100%; margin-bottom: 30px; } }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <!-- ... نفس الهيدر ... -->
+    </header>
+
+    <main class="diseases-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>موسوعة أمراض الفم والأسنان</h1>
+                <p>دليلك الشامل لفهم أشهر الأمراض التي تصيب الفم والأسنان، أسبابها، أعراضها، وطرق علاجها.</p>
+            </div>
+
+            <div class="diseases-container">
+                <aside class="diseases-nav">
+                    <h3>فئات الأمراض</h3>
+                    <ul>
+                        <li><a href="#caries" class="disease-link active">تسوس الأسنان</a></li>
+                        <li><a href="#gingivitis" class="disease-link">التهاب اللثة</a></li>
+                        <li><a href="#periodontitis" class="disease-link">التهاب دواعم السن</a></li>
+                        <li><a href="#aphthous-ulcer" class="disease-link">القرحة الفموية</a></li>
+                        <li><a href="#leukoplakia" class="disease-link">الطلاوة (Leukoplakia)</a></li>
+                    </ul>
+                </aside>
+
+                <div class="disease-content">
+                    <section id="caries" class="disease-section active">
+                        <div class="disease-card">
+                            <h2>تسوس الأسنان (Dental Caries)</h2>
+                            <p>هو تلف يصيب بنية السن نتيجة لنشاط بكتيري يحلل السكريات وينتج أحماضًا تهاجم مينا السن.</p>
+                            <h4>الأسباب</h4><p>تراكم البلاك، استهلاك السكريات بكثرة، عدم العناية بنظافة الفم.</p>
+                            <h4>الأعراض</h4><ul><li>ألم وحساسية في الأسنان.</li><li>ظهور بقع بنية أو سوداء على السن.</li><li>تكون تجاويف أو ثقوب.</li></ul>
+                            <h4>العلاج الدوائي</h4><p>معاجين وغسولات الفم التي تحتوي على الفلورايد. قد يصف الطبيب ورنيش الفلورايد عالي التركيز.</p>
+                            <h4>العلاج الطبيعي/الوقائي</h4><p>تفريش الأسنان مرتين يوميًا، استخدام خيط الأسنان، تقليل السكريات، وزيارات منتظمة لطبيب الأسنان.</p>
+                        </div>
+                    </section>
+                    <section id="gingivitis" class="disease-section">
+                        <div class="disease-card">
+                            <h2>التهاب اللثة (Gingivitis)</h2>
+                            <p>هو المرحلة الأولى من أمراض اللثة، ويحدث بسبب تراكم طبقة البلاك على الأسنان.</p>
+                            <h4>الأسباب</h4><p>إهمال نظافة الفم، التدخين، التغيرات الهرمونية، بعض الأمراض مثل السكري.</p>
+                            <h4>الأعراض</h4><ul><li>لثة حمراء، منتفخة، أو حساسة.</li><li>نزيف اللثة بسهولة عند تنظيف الأسنان.</li><li>رائحة فم كريهة.</li></ul>
+                            <h4>العلاج الدوائي</h4><p>غسولات الفم المطهرة التي تحتوي على الكلورهيكسيدين (تستخدم لفترة قصيرة تحت إشراف طبي).</p>
+                            <h4>العلاج الطبيعي/الوقائي</h4><p>العناية الفموية الممتازة هي العلاج الأساسي. التنظيف الاحترافي لدى طبيب الأسنان لإزالة الجير.</p>
+                        </div>
+                    </section>
+                    <section id="periodontitis" class="disease-section">
+                        <div class="disease-card">
+                            <h2>التهاب دواعم السن (Periodontitis)</h2>
+                            <p>مرحلة متقدمة من أمراض اللثة تدمر الأنسجة والعظام الداعمة للأسنان.</p>
+                            <h4>الأسباب</h4><p>تطور التهاب اللثة غير المعالج، عوامل وراثية، ضعف المناعة.</p>
+                            <h4>الأعراض</h4><ul><li>جميع أعراض التهاب اللثة.</li><li>انحسار اللثة وتكون جيوب لثوية.</li><li>تخلخل في الأسنان.</li></ul>
+                            <h4>العلاج الدوائي</h4><p>مضادات حيوية فموية أو موضعية للسيطرة على العدوى البكتيرية.</p>
+                            <h4>العلاج الطبيعي/الوقائي</h4><p>الحفاظ على نظافة الفم لمنع التدهور. العلاج يتطلب تدخلًا طبيًا متخصصًا (تنظيف عميق أو جراحة).</p>
+                        </div>
+                    </section>
+                    <section id="aphthous-ulcer" class="disease-section">
+                        <div class="disease-card">
+                            <h2>القرحة الفموية (Aphthous Ulcer)</h2>
+                            <p>تقرحات صغيرة ومؤلمة تظهر داخل الفم. غير معدية.</p>
+                            <h4>الأسباب</h4><p>غير معروفة تمامًا، قد ترتبط بالتوتر، إصابات الفم، نقص فيتامينات (B12, حديد)، أو حساسية طعام.</p>
+                            <h4>الأعراض</h4><ul><li>قرحة بيضاء أو صفراء محاطة بهالة حمراء.</li><li>ألم حارق أو واخز.</li></ul>
+                            <h4>العلاج الدوائي</h4><p>مسكنات ألم موضعية (جل أو مرهم)، غسولات فم ستيرويدية للحالات الشديدة.</p>
+                            <h4>العلاج الطبيعي/الوقائي</h4><p>المضمضة بالماء والملح، تجنب الأطعمة الحارة والحمضية. تختفي عادة من تلقاء نفسها خلال أسبوع إلى أسبوعين.</p>
+                        </div>
+                    </section>
+                    <section id="leukoplakia" class="disease-section">
+                        <div class="disease-card">
+                            <h2>الطلاوة أو اللطخة البيضاء (Leukoplakia)</h2>
+                            <p>ظهور بقع بيضاء سميكة على اللثة، باطن الخدين، أو اللسان. لا يمكن إزالتها بالكشط.</p>
+                            <h4>الأسباب</h4><p>السبب الرئيسي هو التدخين ومضغ التبغ. قد تحدث بسبب احتكاك مزمن من أطقم أسنان غير مناسبة.</p>
+                            <h4>الأعراض</h4><ul><li>بقع بيضاء أو رمادية في الفم.</li><li>قد تكون مسطحة أو غير منتظمة الملمس.</li><li>عادة غير مؤلمة ولكن قد تكون حساسة للمس أو الحرارة.</li></ul>
+                            <h4>العلاج الدوائي</h4><p>لا يوجد علاج دوائي مباشر. قد يصف الطبيب أدوية مضادة للفيروسات إذا كان السبب فيروسي.</p>
+                            <h4>العلاج الطبيعي/الوقائي</h4><p>التوقف الفوري عن التدخين ومنتجات التبغ هو أهم خطوة. العلاج يعتمد على إزالة الخزعة (عينة) وفحصها، وقد يتطلب إزالة البقعة جراحيًا أو بالليزر.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- ... نفس الفوتر ... -->
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.disease-link');
+            const sections = document.querySelectorAll('.disease-section');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    links.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    const targetId = this.getAttribute('href').substring(1);
+                    sections.forEach(section => {
+                        section.style.display = section.id === targetId ? 'block' : 'none';
+                        if (section.id === targetId) {
+                            section.classList.add('active');
+                        } else {
+                            section.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
