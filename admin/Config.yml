@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main # أو master حسب اسم الفرع الرئيسي في مستودعك
+
+media_folder: "assets/images" # سيتم حفظ الصور المرفوعة هنا
+public_folder: "/assets/images"
+
+collections:
+  - name: "books"
+    label: "الكتب والمراجع"
+    folder: "_data/books"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "عنوان الكتاب", name: "title", widget: "string" }
+      - { label: "صورة الغلاف", name: "cover_image", widget: "image" }
+      - { label: "رابط تحميل PDF", name: "pdf_link", widget: "string" }
+      - { label: "التخصص", name: "category", widget: "select", options: ["تشريح وأنسجة", "أمراض الفم", "تقويم الأسنان", "جراحة", "مواد الأسنان"] }
+
+  - name: "news"
+    label: "الأخبار"
+    folder: "_data/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "عنوان الخبر", name: "title", widget: "string" }
+      - { label: "صورة الخبر", name: "news_image", widget: "image" }
+      - { label: "مقتطف عن الخبر", name: "excerpt", widget: "text" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime" }
+
+  - name: "diseases"
+    label: "موسوعة الأمراض"
+    folder: "_data/diseases"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "اسم المرض", name: "title", widget: "string" }
+      - { label: "شرح المرض", name: "description", widget: "markdown" }
+      - { label: "الأعراض", name: "symptoms", widget: "markdown" }
+      - { label: "العلاج", name: "treatment", widget: "markdown" }
+      - { label: "الفئة", name: "category", widget: "select", options: ["أمراض اللثة", "تسوس", "أمراض الأنسجة"] }
