@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأخبار - Mentist</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-page { padding: 60px 0; background-color: #F8F9FA; }
+        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header h1 { font-size: 42px; font-weight: 700; color: #0A2540; margin-bottom: 15px; }
+        .page-header p { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+        .news-card { background: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; }
+        .news-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,123,255,0.15); }
+        .news-image { width: 100%; height: 220px; object-fit: cover; }
+        .news-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-title { font-size: 20px; font-weight: 700; margin-bottom: 15px; line-height: 1.4; }
+        .news-excerpt { font-size: 15px; color: #555; line-height: 1.7; flex-grow: 1; margin-bottom: 20px; }
+        .news-meta { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #888; }
+        .news-meta .read-more { color: #007BFF; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <!-- ... نفس الهيدر ... -->
+    </header>
+
+    <main class="news-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>آخر أخبار طب الأسنان</h1>
+                <p>تابع أحدث الاكتشافات والتقنيات والمؤتمرات في عالم طب الأسنان.</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card"><img src="https://i.postimg.cc/y8K6c2zB/ai-dentistry.jpg" class="news-image"><div class="news-content"><h3 class="news-title">ثورة الذكاء الاصطناعي في تشخيص أمراض الأسنان</h3><p class="news-excerpt">خوارزميات الذكاء الاصطناعي تساهم في تحليل صور الأشعة بدقة تفوق العين البشرية.</p><div class="news-meta"><span>منذ شهر</span><a href="#" class="read-more">اقرأ المزيد</a></div></div></div>
+                <div class="news-card"><img src="https://i.postimg.cc/L6hKxYjJ/regenerative-dentistry.jpg" class="news-image"><div class="news-content"><h3 class="news-title">طب الأسنان التجديدي: حلم إعادة نمو الأسنان يقترب</h3><p class="news-excerpt">باحثون يحققون تقدمًا في تجارب تهدف إلى تحفيز براعم الأسنان "النائمة" للنمو مجددًا.</p><div class="news-meta"><span>منذ 3 أشهر</span><a href="#" class="read-more">اقرأ المزيد</a></div></div></div>
+                <div class="news-card"><img src="https://i.postimg.cc/tJ7pQ5V5/3d-printing-dentistry.jpg" class="news-image"><div class="news-content"><h3 class="news-title">الطباعة ثلاثية الأبعاد: تيجان وزراعات في يوم واحد</h3><p class="news-excerpt">أصبحت الطابعات ثلاثية الأبعاد تسمح بتصنيع تيجان وقشور مخصصة داخل العيادة في جلسة واحدة.</p><div class="news-meta"><span>منذ 5 أشهر</span><a href="#" class="read-more">اقرأ المزيد</a></div></div></div>
+                <!-- Add 17 more news cards here to reach 20 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- ... نفس الفوتر ... -->
+    </footer>
+</body>
+</html>
