@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قسم الترفيه - Mentist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Mentist Logo" class="logo-image">
+                    <span class="logo-text">Mentist</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="library.html">المكتبة الرقمية</a></li>
+                        <li><a href="diseases.html">موسوعة الأمراض</a></li>
+                        <li><a href="news.html">الأخبار</a></li>
+                        <li><a href="games.html" class="active">قسم الترفيه</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>قسم الترفيه التعليمي</h1>
+                <p>استرح من الدراسة واختبر معلوماتك بطريقة ممتعة وتفاعلية مع ألعابنا التعليمية.</p>
+            </div>
+
+            <div class="games-grid">
+                <!-- Game 1: Cavity Combat -->
+                <div class="game-container">
+                    <h2>لعبة: مكافحة التسوس</h2>
+                    <div id="cavity-combat-game" class="game-board">
+                        <div id="cc-tooth" class="cc-tooth"></div>
+                        <div id="cc-score" class="game-score">النقاط: 0</div>
+                        <button id="cc-start-btn" class="game-start-btn">ابدأ اللعبة</button>
+                    </div>
+                </div>
+
+                <!-- Game 2: Clinic Simulator -->
+                <div class="game-container">
+                    <h2>لعبة: محاكي العيادة</h2>
+                    <div id="clinic-simulator-game" class="game-board">
+                        <div id="cs-patient-area">
+                            <div id="cs-tooth-case" class="cs-tooth-clean"></div>
+                        </div>
+                        <div id="cs-case-description">الحالة: أسنان نظيفة</div>
+                        <div id="cs-tools">
+                            <div class="cs-tool" data-tool="scaler"><img src="https://i.postimg.cc/L5fH7YjD/scaler.png" alt="Scaler"><span>تنظيف الجير</span></div>
+                            <div class="cs-tool" data-tool="bleaching"><img src="https://i.postimg.cc/k5YvjB0h/bleaching.png" alt="Bleaching"><span>تبييض</span></div>
+                            <div class="cs-tool" data-tool="drill"><img src="https://i.postimg.cc/J4kZ0y3t/drill.png" alt="Drill"><span>علاج التسوس</span></div>
+                            <div class="cs-tool" data-tool="forceps"><img src="https://i.postimg.cc/W4x3B0qM/forceps.png" alt="Forceps"><span>خلع</span></div>
+                        </div>
+                        <div id="cs-feedback">اختر الأداة المناسبة</div>
+                        <button id="cs-new-case-btn" class="game-start-btn">حالة جديدة</button>
+                    </div>
+                </div>
+                
+                <!-- Game 3: Quick Diagnosis -->
+                <div class="game-container" id="quick-diagnosis-container">
+                    <h2>لعبة: التشخيص السريع</h2>
+                    <div id="quick-diagnosis-game" class="game-board">
+                        <div id="qd-question-area">
+                            <p id="qd-question-text">ما هو التشخيص الأولي لحالة مريض يعاني من نزيف اللثة عند التفريش ولثة حمراء متورمة؟</p>
+                        </div>
+                        <div id="qd-options-area">
+                            <button class="qd-option">تسوس عميق</button>
+                            <button class="qd-option">التهاب اللثة</button>
+                            <button class="qd-option">تآكل المينا</button>
+                            <button class="qd-option">قرحة فموية</button>
+                        </div>
+                        <div id="qd-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- ... نفس الفوتر ... -->
+    </footer>
+
+    <script src="games.js"></script>
+</body>
+</html>
